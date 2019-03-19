@@ -11,9 +11,8 @@
 
 <script>
 import MyHeader from "../MyHeader"
-import Character from "./Character";
-import Planet from "./Planet";
-import Starships from "./Starships"
+import Content from "./Content";
+import Planet from "./Info";
 
 export default {
   name: "Detail",
@@ -24,8 +23,8 @@ export default {
   },
   components: {
     MyHeader,
-    Character,
-    Planet,
+    Content,
+    Info,
     Starships
 
   },
