@@ -1,15 +1,15 @@
 <template>
   <div class="container">
     <div class="jumbotron">
-      <h2>News List</h2>
+      <h2></h2>
       <h4>Select News Source</h4>
       <select v-on:change="sourceChanged">
         <option value="">Please select news source...</option>
         <option
-          v-for="source in sources"
-          v-bind:key="source.id"
-          v-bind:value="source.id"
-          >{{ source.name }}</option
+          v-for="searchQuery in SearchQuerys"
+          v-bind:key="searchQuery.id"
+          v-bind:value="searchQuery.id"
+          >{{ searchQuery.name }}</option
         >
       </select>
     </div>
@@ -21,7 +21,7 @@ export default {
   name: "SourceSelection",
   data: function() {
     return {
-      sources: []
+      searchQuery: []
     };
   },
   methods: {
@@ -32,10 +32,10 @@ export default {
   created: function() {
     this.$http
       .get(
-        "https://swapi.co/"
+        "https://swapi.co/api/?search=" + searchQuery
       )
       .then(function(data) {
-        this.sources = data.body.sources;
+        this.searchQuery = data.body.searchQuery;
       });
   }
 };

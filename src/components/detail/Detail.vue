@@ -3,7 +3,7 @@
     <MyHeader />
        <Planet v-if="type === 'planet'"  />
       <Character v-if="type === 'character'"  />
-       <Starships v-if="type === 'Starships'"  />
+       <Starships v-if="type === 'starships'"  />
   
    
   </div>
