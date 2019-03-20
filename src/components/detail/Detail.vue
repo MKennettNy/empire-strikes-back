@@ -1,10 +1,9 @@
 <template>
   <div>
     <MyHeader />
-       <Planet v-if="type === 'planet'"  />
-      <Character v-if="type === 'character'"  />
-       <Starships v-if="type === 'starships'"  />
-  
+      <Content />
+      <Info/>
+    <MyFooter />
    
   </div>
 </template>
@@ -12,29 +11,33 @@
 <script>
 import MyHeader from "../MyHeader"
 import Content from "./Content";
-import Planet from "./Info";
+import Info from "./Info";
+import MyFooter from "../MyFooter";
 
 export default {
   name: "Detail",
   data: function() {
     return {
-      type: '',
+      searchQuery: '',
     };
   },
   components: {
     MyHeader,
     Content,
     Info,
-    Starships
+    MyFooter
 
   },
     created: function() {
-    if (this.$route.params.type) {
-       this.type = this.$route.params.type;
+    if (this.$route.params.searchQuery) {
+       this.searchQuery = this.params.searchQuery;
+
     }
   }
 
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+
+</style>

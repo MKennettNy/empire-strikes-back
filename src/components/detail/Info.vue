@@ -1,17 +1,13 @@
 <template>
   <div class="container">
-    <div class="jumbotron">
+    <div>
       <h2></h2>
-      <h4>Select News Source</h4>
-      <select v-on:change="sourceChanged">
-        <option value="">Please select news source...</option>
+      <option value="">Please select news source...</option>
         <option
           v-for="searchQuery in SearchQuerys"
           v-bind:key="searchQuery.id"
           v-bind:value="searchQuery.id"
-          >{{ searchQuery.name }}</option
-        >
-      </select>
+          >{{ searchQuery.name }}</option>
     </div>
   </div>
 </template>
