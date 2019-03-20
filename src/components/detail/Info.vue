@@ -21,20 +21,20 @@ export default {
     };
   },
   methods: {
-    sourceChanged: function(evt) {
-      this.$emit("$sourceChanged", evt.target.value);
+    SearchQuery: function(source) {
+      if (source) {
+        this.$http
+          .get(
+            "https://newsapi.org/v2/top-headlines?sources=" +
+              source
+          )
+          .then(function(data) {
+            this.articles = data.body.articles;
+          });
+      }
     }
-  },
-  created: function() {
-    this.$http
-      .get(
-        "https://swapi.co/api/?search=" + searchQuery
-      )
-      .then(function(data) {
-        this.searchQuery = data.body.searchQuery;
-      });
   }
-};
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

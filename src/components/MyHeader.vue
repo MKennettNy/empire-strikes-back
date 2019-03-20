@@ -1,5 +1,6 @@
 <template>
   <header>
+    <!-- <p @click="navigateTo('../home/Home')">Back</p> -->
     <p>Back</p>
   <p>Search</p>
   </header>
