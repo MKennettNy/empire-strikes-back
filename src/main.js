@@ -11,7 +11,7 @@ Vue.use(VueRouter);
 
 const routes = [
   { path: "/", component: Home },
- { name: "detail", path: "/detail", component: Detail, props: true }
+  { name: "detail", path: "/detail", component: Detail, props: true }
  
 ];
 
@@ -19,7 +19,6 @@ const router = new VueRouter({
   routes,
   mode: "history"
 });
-
 Vue.config.productionTip = false;
 
 new Vue({
