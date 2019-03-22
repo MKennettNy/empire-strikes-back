@@ -1,25 +1,15 @@
 <template>
-  <div class="container">
-    <div>
-      <p>
-          Name: {{ data.name }}
-      </p>
-    </div>
+  <div>
+    <div>Content</div>
+    <p>Content data msg:{{contentdata.msg}}</p>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Info",
-  props: ["data"],
-  watch: {
-    data: function(val) {
-      this.data=val;
-    }
-  }
+  name: "Content",
+  props: ["contentdata"]
 };
 </script>
 
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped></style>

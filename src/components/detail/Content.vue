@@ -1,21 +1,15 @@
 <template>
-  <div class="container">
-    <img src="" alt="">
-    <h2>{{ data.name }}</h2>
+  <div>
+    <div>Content</div>
+    <p>Content data msg:{{contentdata.msg}}</p>
   </div>
 </template>
 
 <script>
-  export default {
-    name: "Content",
-    props: ["data"],
-    
-// props looking for name
- 
-  }
+export default {
+  name: "Content",
+  props: ["contentdata"]
+};
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-  
-</style>
+<style scoped></style>
