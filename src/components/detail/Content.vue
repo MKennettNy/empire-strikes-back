@@ -1,6 +1,5 @@
 <template>
   <div class="container">
-      <h2>Name: {{ contentdata.name }}</h2>
       <!-- <img src="" alt=""> -->
   </div>
 </template>

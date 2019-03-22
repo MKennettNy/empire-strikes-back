@@ -9,12 +9,13 @@
 <script>
 import MyHeader from "../MyHeader"
 import Content from "./Content"
-// import Info from "./Info"
+import Info from "./Info"
 export default {
   name: "Detail",
   components: {
     MyHeader,
-    Content
+    Content,
+    Info
     // Info 
 
 
